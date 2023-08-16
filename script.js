@@ -1,10 +1,15 @@
 const ban = document.getElementById("banner")
-const bantitle=document.getElementById("title")
+const bantitle= document.getElementById("title")
 const bandisc = document.getElementById("discription")
+const title = document.getElementById("titlee")
+const date = document.getElementById("date")
+const lang = document.getElementById("lan")
+const rating = document.getElementById("rating")
+const dis = document.getElementById("disc")
+
+
 const API_KEY ="c1256905da155611d0d63cc7cb725daf";
 const baseURL = "https://api.themoviedb.org/3";
-
-
 const imageUrl = "https://image.tmdb.org/t/p/original/";
 
 
@@ -48,10 +53,30 @@ function createrows(movie,i){
     movie.map((movie)=>{
         const imagee =document.getElementById(`imga${[i]}`);
         const poster = document.createElement("img");
-        poster.src=`${imageUrl}${movie.backdrop_path}`;
+        if (i>0){
+            poster.src=`${imageUrl}${movie.backdrop_path}`;
+        }else{
+            poster.src=`${imageUrl}${movie.poster_path}`;
+            poster.classList.add('largerimage')
+
+        }
         poster.classList.add('image')
         imagee.appendChild(poster);
 
+         //details of movies 
+        poster.addEventListener("click",function(){
+        console.log(movie)
+        const movpoimg = document.getElementById("movposimg")
+        movpoimg.src =`${imageUrl}${movie.poster_path}`;
+        title.textContent = ( movie.title || movie.name || movie.original_name);
+        date.textContent=movie.first_air_date;
+        lang.textContent=movie.original_language;
+        rating.textContent=movie.vote_average;
+        dis.textContent=movie.overview;
+
+        
+
+         })
     })
 
 }
