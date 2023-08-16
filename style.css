@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    color: white;
+    
+}
+#banner{
+    background-size: cover;
+    color :white;
+    height :500px;
+}
+#banner-content{
+    margin-left: 30px;
+    padding-top: 120px;
+    height: 190px;
+}
+#title{
+    font-size: 3rem;
+    font-weight: 800;
+    font-family:monospace;
+    padding-bottom: 0.3rem;
+}
+#discription{
+    width:45rem;
+    line-height: 1.1rem;
+    padding-top: 1rem;
+    height:80px;
+    font-size: 0.8rem;
+    max-width: 360px;
+}
+.ban-btn{
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+    font-weight: 700;
+    border-radius: 2px;
+    background-color: rgba(51,51,51,0.5);
+    padding: 0.5rem 2rem;
+}
+.ban-btn:hover{
+    color:#000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+.banner-fade{
+    height: 7.4rem;
+    background-image: linear-gradient(
+        280deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111,
+    );
+}
+.mrow{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.imga-con{
+    display: flex;
+    padding: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.imga-con::-webkit-scrollbar{
+    width: 0;
+    background-color: rgba(0,0,0, 0.1);
+}
+.image{
+    width:100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+.image:hover{
+    transform: scale(1.08);
+}
