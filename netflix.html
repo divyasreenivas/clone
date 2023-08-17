@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href ="style.css" rel="stylesheet">
+    <title>NETFLIX</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class=" navbar">
+        <ul>
+            <a href="#banner"> <img src="https://i.ibb.co/r5krrdz/logo.png"  alt=""  id ="logo"width="9%" /></a>
+            <li><a href="#profile">MYPROFILE</a></li>
+            <li><a href="#search">SEARCH</a></li>
+            <li><a href="#mylist">MYLIST</a></li>
+            <li><a href="#movies">MOVIES</a></li>
+            <li><a href="#home">HOME</a></li>                
+        </ul>
+    </nav>
+    <!-- headerss -->
+    <header id = "banner">
+        <div class = "banner-content" id ="banner-content">
+            <h1 id = "title"></h1>
+            <div class ="buttons">
+                <button class ="ban-btn">Play</button>
+                <button class ="ban-btn">My List</button>
+            </div>
+            <h1 id ="discription"></h1>
+        </div>
+        <div class="banner-fade">
+        </div>
+    </header>
+    <!-- movierows    01 -->
+    <div class="mrow" id ="mrow0">
+        <h2>Netflix Original</h2>
+        <div class="imga-con" id ="imga0"></div>
+    </div>
+    <!-- movierows 02 -->
+    <div class="mrow" id ="mrow1">
+        <h2>Trending</h2>
+        <div class="imga-con" id ="imga1"></div>
+    </div>
+    <!-- movierows 03 -->
+    <div class="mrow" id ="mrow2">
+        <h2>Top Rated</h2>
+        <div class="imga-con" id ="imga2"></div>
+    </div>
+    <!-- movierows 04  -->
+    <div class="mrow" id ="mrow3">
+        <h2>Action Movies</h2>
+        <div class="imga-con" id ="imga3"></div>
+    </div>
+    <!-- movierows 05  -->
+    <div class="mrow" id ="mrow4">
+        <h2>Comedy Movies</h2>
+        <div class="imga-con" id ="imga4"></div>
+    </div>
+    <!-- movierows 06 -->
+    <div class="mrow" id ="mrow5">
+        <h2>Horror Movies</h2>
+        <div class="imga-con" id ="imga5"></div>
+    </div>
+    <!-- movierows 07  -->
+    <div class="mrow" id ="mrow6">
+        <h2>Korean Dramas</h2>
+        <div class="imga-con" id ="imga6"></div>
+    </div>
+    <!-- movierows 08 -->
+    <div class="mrow" id ="mrow7">
+        <h2>Documanteris</h2>
+        <div class="imga-con" id ="imga7"></div>
+    </div>
+    <!-- copyrights -->
+    <div id ="con" class="con">
+        <div id ="movpos">
+            <img id ="movposimg" src ="" alt ="">
+        </div>
+        <div class ="details">
+            <h2 id ="titlee"></h2>
+            <div class="smalldetails">
+                <p id ="date"></p>
+                <p id ="lan"></p>
+                <p id ="rating"></p>
+            </div>
+            <h1 id ="disc"></h1>
+            <button id ="play">play</button>
+        </div>
+        <button id ="close">X</button>
+    </div>
+    <script src ="script.js"></script>
+</body>
+</html>
