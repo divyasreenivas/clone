@@ -6,13 +6,12 @@ const date = document.getElementById("date")
 const lang = document.getElementById("lan")
 const rating = document.getElementById("rating")
 const dis = document.getElementById("disc")
-
+const closebtn =document.getElementById("close")
+const cont =document.getElementById("con")
 
 const API_KEY ="c1256905da155611d0d63cc7cb725daf";
 const baseURL = "https://api.themoviedb.org/3";
 const imageUrl = "https://image.tmdb.org/t/p/original/";
-
-
 
 const requests = [
     `/discover/tv?api_key=${API_KEY}&with_networks=213`,
@@ -24,7 +23,6 @@ const requests = [
     `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
     `/discover/movie?api_key=${API_KEY}&with_genres=99`
 ]
-
 
 // async function datafetch(){
 //     const response = await fetch(`${baseURL}${requests[0]}`)
@@ -66,6 +64,7 @@ function createrows(movie,i){
          //details of movies 
         poster.addEventListener("click",function(){
         console.log(movie)
+        cont.style.display="flex"
         const movpoimg = document.getElementById("movposimg")
         movpoimg.src =`${imageUrl}${movie.poster_path}`;
         title.textContent = ( movie.title || movie.name || movie.original_name);
@@ -92,7 +91,11 @@ async function fetchingbandata(){
     console.log(select)
     ban.style.backgroundImage=`url(${imageUrl}${select.backdrop_path})`;
     bantitle.textContent=select.name;
-    bandisc.textContent = select.overview;
-    
+    bandisc.textContent = select.overview;    
 }
 fetchingbandata()
+// close about  container 
+closebtn.addEventListener("click", function(){
+    cont.style.display="none"
+
+})
